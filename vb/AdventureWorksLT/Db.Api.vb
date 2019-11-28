@@ -2,7 +2,7 @@
 Imports System.Threading
 
 Partial Class Db
-    Public Function GetSalesOrderHeadersAsync(filterText As String, orderBy As IReadOnlyList(Of IColumnComparer), ct As CancellationToken) As Task(Of DataSet(Of SalesOrderHeader))
+    Public Function GetSalesOrderHeadersAsync(filterText As String, orderBy As IReadOnlyList(Of IColumnComparer), Optional ct As CancellationToken = Nothing) As Task(Of DataSet(Of SalesOrderHeader))
         Dim result As DbSet(Of SalesOrderHeader)
 
         If String.IsNullOrEmpty(filterText) Then

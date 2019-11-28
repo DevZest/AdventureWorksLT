@@ -30,7 +30,7 @@ Partial Class Db
         Return Await result.ToDataSetAsync(ct)
     End Function
 
-    Public Function DeleteSalesOrderAsync(dataSet As DataSet(Of SalesOrderHeader.Key), ct As CancellationToken) As Task(Of Integer)
+    Public Function DeleteSalesOrderAsync(dataSet As DataSet(Of SalesOrderHeader.Key), Optional ct As CancellationToken = Nothing) As Task(Of Integer)
         Return SalesOrderHeader.DeleteAsync(dataSet, Function(s, x) s.Match(x), ct)
     End Function
 
