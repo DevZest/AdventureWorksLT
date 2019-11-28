@@ -1,5 +1,14 @@
 Imports DevZest.Data
 
+'**********************************************************************************************************
+'*  Most of the code of this class Is generated automatically via "Model Visualizer" tool window of
+'*  free RDO.Tools Visual Studio extension.
+'*  
+'*  To install RDO.Tools:
+'*  Select Visual Studio menu "Tools" -> "Extensions and Update...", then search for "DevZest.Data.Tools".
+'*  The extension requires Visual Studio 15.3 Or later.
+'**********************************************************************************************************
+
 <Computation("ComputeContactPerson")>
 <DbIndex("IX_Customer_EmailAddress", Description:="Nonclustered index.")>
 Public Class Customer

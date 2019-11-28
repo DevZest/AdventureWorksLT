@@ -1,3 +1,12 @@
+'**********************************************************************************************************
+'*  Most of the code of this class Is generated automatically via "Model Visualizer" tool window of
+'*  free RDO.Tools Visual Studio extension.
+'*  
+'*  To install RDO.Tools:
+'*  Select Visual Studio menu "Tools" -> "Extensions and Update...", then search for "DevZest.Data.Tools".
+'*  The extension requires Visual Studio 15.3 Or later.
+'**********************************************************************************************************
+
 <CheckConstraint("CK_Product_ListPrice", GetType(My.UserMessages), NameOf(My.UserMessages.CK_Product_ListPrice), Description:="Check constraint [ListPrice] >= (0.00)")>
 <CheckConstraint("CK_Product_SellEndDate", GetType(My.UserMessages), NameOf(My.UserMessages.CK_Product_SellEndDate), Description:="Check constraint [SellEndDate] >= [SellStartDate] OR [SellEndDate] IS NULL")>
 <CheckConstraint("CK_Product_StandardCost", GetType(My.UserMessages), NameOf(My.UserMessages.CK_Product_StandardCost), Description:="Check constraint [StandardCost] >= (0.00)")>
