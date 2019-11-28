@@ -27,7 +27,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="DevZest.Data.SqlServer" Version="1.0.0-rc-20190926" />
+    <PackageReference Include="DevZest.Data.SqlServer" Version="1.0.0-*" />
   </ItemGroup>
   
   <ItemGroup>

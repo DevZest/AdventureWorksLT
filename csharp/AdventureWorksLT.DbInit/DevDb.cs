@@ -1,5 +1,4 @@
-﻿#if DbInit
-using DevZest.Data.DbInit;
+﻿using DevZest.Data.DbInit;
 using System.IO;
 
 namespace DevZest.Samples.AdventureWorksLT
@@ -15,4 +14,3 @@ namespace DevZest.Samples.AdventureWorksLT
         }
     }
 }
-#endif

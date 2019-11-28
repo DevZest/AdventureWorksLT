@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+
+    <RootNamespace>DevZest.Samples.AdventureWorksLT</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\AdventureWorksLT.DbInit\LocalDb\AdventureWorksLT.mdf" Link="AdventureWorksLT.mdf" />
+    <None Include="..\AdventureWorksLT.DbInit\LocalDb\AdventureWorksLT_log.ldf" Link="AdventureWorksLT_log.ldf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.9.0" />
+    <PackageReference Include="MSTest.TestAdapter" Version="1.3.2" />
+    <PackageReference Include="MSTest.TestFramework" Version="1.3.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AdventureWorksLT.DbInit\AdventureWorksLT.DbInit.csproj" />
+    <ProjectReference Include="..\AdventureWorksLT\AdventureWorksLT.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,9 +1,16 @@
-﻿#if DbInit
-using DevZest.Data.DbInit;
+﻿using DevZest.Data.DbInit;
 using System.IO;
 
 namespace DevZest.Samples.AdventureWorksLT
 {
+    /**********************************************************************************************************
+     *  You can generate an empty database via right clicking anywhere in the code editor of this class in
+     *  Visual Studio, then select "Generate Db..." context menu item.
+     *  
+     *  To do that, Visual Studio extension RDO.Tools is required. To install:
+     *  Select Visual Studio menu "Tools" -> "Extensions and Update...", then search for "DevZest.Data.Tools".
+     *  The extension requires Visual Studio 15.3 or later.
+     *********************************************************************************************************/
     [EmptyDb]
     public sealed class _DevDb : DbSessionProvider<Db>
     {
@@ -18,4 +25,3 @@ namespace DevZest.Samples.AdventureWorksLT
         }
     }
 }
-#endif

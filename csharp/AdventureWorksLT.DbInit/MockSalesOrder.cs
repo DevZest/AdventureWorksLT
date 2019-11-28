@@ -1,15 +1,25 @@
 ﻿using DevZest.Data;
+using DevZest.Data.DbInit;
 using DevZest.Data.Primitives;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
 
-#if DbInit
-using DevZest.Data.DbInit;
-#endif
-
 namespace DevZest.Samples.AdventureWorksLT
 {
+    /*****************************************************************************************************************************
+     *  You can generate testing data by:
+     *  1. Right click anywhere in the code editor of this class in Visual Studio, then select "Generate Db..." context menu item,
+     *     a local database \LocalDb\AdventureWorksLT.DbInit.mdf (as defined in class _DevDb) will be generated.
+     *  2. Use SQL Server Management Studio to open this local database and edit table data;
+     *  3. Right click anywhere in the code editor of this class in Visual Studio, then select "Generate DataSet..." context menu
+     *     item, the testing data code will be generated automatically for method Headers() and Details().
+     *  
+     *  To do that, Visual Studio extension RDO.Tools is required. To install:
+     *  Select Visual Studio menu "Tools" -> "Extensions and Update...", then search for "DevZest.Data.Tools".
+     *  The extension requires Visual Studio 15.3 or later.
+     ****************************************************************************************************************************/
+
     /// <remarks><see cref="SalesOrder"/> and <see cref="SalesOrderDetail"/> are chosen for having foreing key to non-existing table(s) and
     /// parent-child relationship.</remarks>
     public sealed class MockSalesOrder : DbMock<Db>
@@ -19,6 +29,9 @@ namespace DevZest.Samples.AdventureWorksLT
             return new MockSalesOrder().MockAsync(db, progress, ct);
         }
 
+        /*******************************************************************
+         *  The body of this method is generated automatically by RDO.Tools.
+         *******************************************************************/
         private static DataSet<SalesOrderHeader> Headers()
         {
             DataSet<SalesOrderHeader> result = DataSet<SalesOrderHeader>.Create().AddRows(4);
@@ -32,18 +45,18 @@ namespace DevZest.Samples.AdventureWorksLT
             _.RevisionNumber[1] = 2;
             _.RevisionNumber[2] = 2;
             _.RevisionNumber[3] = 2;
-            _.OrderDate[0] = Convert.ToDateTime("2008-06-01T00:00:00.000");
-            _.OrderDate[1] = Convert.ToDateTime("2008-06-01T00:00:00.000");
-            _.OrderDate[2] = Convert.ToDateTime("2008-06-01T00:00:00.000");
-            _.OrderDate[3] = Convert.ToDateTime("2008-06-01T00:00:00.000");
-            _.DueDate[0] = Convert.ToDateTime("2008-06-13T00:00:00.000");
-            _.DueDate[1] = Convert.ToDateTime("2008-06-13T00:00:00.000");
-            _.DueDate[2] = Convert.ToDateTime("2008-06-13T00:00:00.000");
-            _.DueDate[3] = Convert.ToDateTime("2008-06-13T00:00:00.000");
-            _.ShipDate[0] = Convert.ToDateTime("2008-06-08T00:00:00.000");
-            _.ShipDate[1] = Convert.ToDateTime("2008-06-08T00:00:00.000");
-            _.ShipDate[2] = Convert.ToDateTime("2008-06-08T00:00:00.000");
-            _.ShipDate[3] = Convert.ToDateTime("2008-06-08T00:00:00.000");
+            _.OrderDate[0] = Convert.ToDateTime("2008-06-01T00:00:00");
+            _.OrderDate[1] = Convert.ToDateTime("2008-06-01T00:00:00");
+            _.OrderDate[2] = Convert.ToDateTime("2008-06-01T00:00:00");
+            _.OrderDate[3] = Convert.ToDateTime("2008-06-01T00:00:00");
+            _.DueDate[0] = Convert.ToDateTime("2008-06-13T00:00:00");
+            _.DueDate[1] = Convert.ToDateTime("2008-06-13T00:00:00");
+            _.DueDate[2] = Convert.ToDateTime("2008-06-13T00:00:00");
+            _.DueDate[3] = Convert.ToDateTime("2008-06-13T00:00:00");
+            _.ShipDate[0] = Convert.ToDateTime("2008-06-08T00:00:00");
+            _.ShipDate[1] = Convert.ToDateTime("2008-06-08T00:00:00");
+            _.ShipDate[2] = Convert.ToDateTime("2008-06-08T00:00:00");
+            _.ShipDate[3] = Convert.ToDateTime("2008-06-08T00:00:00");
             _.Status[0] = SalesOrderStatus.Shipped;
             _.Status[1] = SalesOrderStatus.Shipped;
             _.Status[2] = SalesOrderStatus.Shipped;
@@ -100,14 +113,17 @@ namespace DevZest.Samples.AdventureWorksLT
             _.RowGuid[1] = new Guid("8a3448c5-e677-4158-a29b-dd33069be0b0");
             _.RowGuid[2] = new Guid("a47665d2-7ac9-4cf3-8a8b-2a3883554284");
             _.RowGuid[3] = new Guid("f1be45a5-5c57-4a50-93c6-5f8be44cb7cb");
-            _.ModifiedDate[0] = Convert.ToDateTime("2008-06-08T00:00:00.000");
-            _.ModifiedDate[1] = Convert.ToDateTime("2008-06-08T00:00:00.000");
-            _.ModifiedDate[2] = Convert.ToDateTime("2008-06-08T00:00:00.000");
-            _.ModifiedDate[3] = Convert.ToDateTime("2008-06-08T00:00:00.000");
+            _.ModifiedDate[0] = Convert.ToDateTime("2008-06-08T00:00:00");
+            _.ModifiedDate[1] = Convert.ToDateTime("2008-06-08T00:00:00");
+            _.ModifiedDate[2] = Convert.ToDateTime("2008-06-08T00:00:00");
+            _.ModifiedDate[3] = Convert.ToDateTime("2008-06-08T00:00:00");
             _.ResumeIdentity();
             return result;
         }
 
+        /*******************************************************************
+         *  The body of this method is generated automatically by RDO.Tools.
+         *******************************************************************/
         private static DataSet<SalesOrderDetail> Details()
         {
             DataSet<SalesOrderDetail> result = DataSet<SalesOrderDetail>.Create().AddRows(32);
@@ -337,38 +353,38 @@ namespace DevZest.Samples.AdventureWorksLT
             _.RowGuid[29] = new Guid("21624302-ca0f-402f-8a46-5a3fffa7d5f3");
             _.RowGuid[30] = new Guid("169c75f6-a364-46e3-8ddb-033528177458");
             _.RowGuid[31] = new Guid("c3fbb3ec-3ff6-4ee1-88cf-230e128815f3");
-            _.ModifiedDate[0] = Convert.ToDateTime("2008-06-01T00:00:00.000");
-            _.ModifiedDate[1] = Convert.ToDateTime("2008-06-01T00:00:00.000");
-            _.ModifiedDate[2] = Convert.ToDateTime("2008-06-01T00:00:00.000");
-            _.ModifiedDate[3] = Convert.ToDateTime("2008-06-01T00:00:00.000");
-            _.ModifiedDate[4] = Convert.ToDateTime("2008-06-01T00:00:00.000");
-            _.ModifiedDate[5] = Convert.ToDateTime("2008-06-01T00:00:00.000");
-            _.ModifiedDate[6] = Convert.ToDateTime("2008-06-01T00:00:00.000");
-            _.ModifiedDate[7] = Convert.ToDateTime("2008-06-01T00:00:00.000");
-            _.ModifiedDate[8] = Convert.ToDateTime("2008-06-01T00:00:00.000");
-            _.ModifiedDate[9] = Convert.ToDateTime("2008-06-01T00:00:00.000");
-            _.ModifiedDate[10] = Convert.ToDateTime("2008-06-01T00:00:00.000");
-            _.ModifiedDate[11] = Convert.ToDateTime("2008-06-01T00:00:00.000");
-            _.ModifiedDate[12] = Convert.ToDateTime("2008-06-01T00:00:00.000");
-            _.ModifiedDate[13] = Convert.ToDateTime("2008-06-01T00:00:00.000");
-            _.ModifiedDate[14] = Convert.ToDateTime("2008-06-01T00:00:00.000");
-            _.ModifiedDate[15] = Convert.ToDateTime("2008-06-01T00:00:00.000");
-            _.ModifiedDate[16] = Convert.ToDateTime("2008-06-01T00:00:00.000");
-            _.ModifiedDate[17] = Convert.ToDateTime("2008-06-01T00:00:00.000");
-            _.ModifiedDate[18] = Convert.ToDateTime("2008-06-01T00:00:00.000");
-            _.ModifiedDate[19] = Convert.ToDateTime("2008-06-01T00:00:00.000");
-            _.ModifiedDate[20] = Convert.ToDateTime("2008-06-01T00:00:00.000");
-            _.ModifiedDate[21] = Convert.ToDateTime("2008-06-01T00:00:00.000");
-            _.ModifiedDate[22] = Convert.ToDateTime("2008-06-01T00:00:00.000");
-            _.ModifiedDate[23] = Convert.ToDateTime("2008-06-01T00:00:00.000");
-            _.ModifiedDate[24] = Convert.ToDateTime("2008-06-01T00:00:00.000");
-            _.ModifiedDate[25] = Convert.ToDateTime("2008-06-01T00:00:00.000");
-            _.ModifiedDate[26] = Convert.ToDateTime("2008-06-01T00:00:00.000");
-            _.ModifiedDate[27] = Convert.ToDateTime("2008-06-01T00:00:00.000");
-            _.ModifiedDate[28] = Convert.ToDateTime("2008-06-01T00:00:00.000");
-            _.ModifiedDate[29] = Convert.ToDateTime("2008-06-01T00:00:00.000");
-            _.ModifiedDate[30] = Convert.ToDateTime("2008-06-01T00:00:00.000");
-            _.ModifiedDate[31] = Convert.ToDateTime("2008-06-01T00:00:00.000");
+            _.ModifiedDate[0] = Convert.ToDateTime("2008-06-01T00:00:00");
+            _.ModifiedDate[1] = Convert.ToDateTime("2008-06-01T00:00:00");
+            _.ModifiedDate[2] = Convert.ToDateTime("2008-06-01T00:00:00");
+            _.ModifiedDate[3] = Convert.ToDateTime("2008-06-01T00:00:00");
+            _.ModifiedDate[4] = Convert.ToDateTime("2008-06-01T00:00:00");
+            _.ModifiedDate[5] = Convert.ToDateTime("2008-06-01T00:00:00");
+            _.ModifiedDate[6] = Convert.ToDateTime("2008-06-01T00:00:00");
+            _.ModifiedDate[7] = Convert.ToDateTime("2008-06-01T00:00:00");
+            _.ModifiedDate[8] = Convert.ToDateTime("2008-06-01T00:00:00");
+            _.ModifiedDate[9] = Convert.ToDateTime("2008-06-01T00:00:00");
+            _.ModifiedDate[10] = Convert.ToDateTime("2008-06-01T00:00:00");
+            _.ModifiedDate[11] = Convert.ToDateTime("2008-06-01T00:00:00");
+            _.ModifiedDate[12] = Convert.ToDateTime("2008-06-01T00:00:00");
+            _.ModifiedDate[13] = Convert.ToDateTime("2008-06-01T00:00:00");
+            _.ModifiedDate[14] = Convert.ToDateTime("2008-06-01T00:00:00");
+            _.ModifiedDate[15] = Convert.ToDateTime("2008-06-01T00:00:00");
+            _.ModifiedDate[16] = Convert.ToDateTime("2008-06-01T00:00:00");
+            _.ModifiedDate[17] = Convert.ToDateTime("2008-06-01T00:00:00");
+            _.ModifiedDate[18] = Convert.ToDateTime("2008-06-01T00:00:00");
+            _.ModifiedDate[19] = Convert.ToDateTime("2008-06-01T00:00:00");
+            _.ModifiedDate[20] = Convert.ToDateTime("2008-06-01T00:00:00");
+            _.ModifiedDate[21] = Convert.ToDateTime("2008-06-01T00:00:00");
+            _.ModifiedDate[22] = Convert.ToDateTime("2008-06-01T00:00:00");
+            _.ModifiedDate[23] = Convert.ToDateTime("2008-06-01T00:00:00");
+            _.ModifiedDate[24] = Convert.ToDateTime("2008-06-01T00:00:00");
+            _.ModifiedDate[25] = Convert.ToDateTime("2008-06-01T00:00:00");
+            _.ModifiedDate[26] = Convert.ToDateTime("2008-06-01T00:00:00");
+            _.ModifiedDate[27] = Convert.ToDateTime("2008-06-01T00:00:00");
+            _.ModifiedDate[28] = Convert.ToDateTime("2008-06-01T00:00:00");
+            _.ModifiedDate[29] = Convert.ToDateTime("2008-06-01T00:00:00");
+            _.ModifiedDate[30] = Convert.ToDateTime("2008-06-01T00:00:00");
+            _.ModifiedDate[31] = Convert.ToDateTime("2008-06-01T00:00:00");
             _.ResumeIdentity();
             return result;
         }

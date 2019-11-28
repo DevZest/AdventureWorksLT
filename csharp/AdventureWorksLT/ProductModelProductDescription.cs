@@ -5,6 +5,14 @@ using System.Threading;
 
 namespace DevZest.Samples.AdventureWorksLT
 {
+    /**********************************************************************************************************
+     *  Most of the code of this class is generated automatically via "Model Visualizer" tool window of
+     *  free RDO.Tools Visual Studio extension.
+     *  
+     *  To install RDO.Tools:
+     *  Select Visual Studio menu "Tools" -> "Extensions and Update...", then search for "DevZest.Data.Tools".
+     *  The extension requires Visual Studio 15.3 or later.
+     *********************************************************************************************************/
     public class ProductModelProductDescription : BaseModel<ProductModelProductDescription.PK>
     {
         [DbPrimaryKey("PK_ProductModelProductDescription_ProductModelID_ProductDescriptionID_Culture", Description = "Primary key (clustered) constraint")]

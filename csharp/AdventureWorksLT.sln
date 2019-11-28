@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdventureWorksLT.DbInit", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdventureWorksLT.WpfApp", "AdventureWorksLT.WpfApp\AdventureWorksLT.WpfApp.csproj", "{89595262-2443-4F2E-9789-60C7998A0A07}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdventureWorksLT.Test", "AdventureWorksLT.Test\AdventureWorksLT.Test.csproj", "{3D3304B2-6AAE-4499-AE32-78C52C648026}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{89595262-2443-4F2E-9789-60C7998A0A07}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{89595262-2443-4F2E-9789-60C7998A0A07}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{89595262-2443-4F2E-9789-60C7998A0A07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D3304B2-6AAE-4499-AE32-78C52C648026}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D3304B2-6AAE-4499-AE32-78C52C648026}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D3304B2-6AAE-4499-AE32-78C52C648026}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D3304B2-6AAE-4499-AE32-78C52C648026}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

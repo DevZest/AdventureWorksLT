@@ -4,6 +4,14 @@ using DevZest.Data.SqlServer;
 
 namespace DevZest.Samples.AdventureWorksLT
 {
+    /**********************************************************************************************************
+     *  Most of the code of this class is generated automatically via "Model Visualizer" tool window of
+     *  free RDO.Tools Visual Studio extension.
+     *  
+     *  To install RDO.Tools:
+     *  Select Visual Studio menu "Tools" -> "Extensions and Update...", then search for "DevZest.Data.Tools".
+     *  The extension requires Visual Studio 15.3 or later.
+     *********************************************************************************************************/
     [DbIndex(nameof(IX_Address_StateProvince), Description = "Nonclustered index.")]
     [DbIndex(nameof(IX_Address_AddressLine1_AddressLine2_City_StateProvince_PostalCode_CountryRegion), Description = "Nonclustered index.")]
     public class Address : BaseModel<Address.PK>

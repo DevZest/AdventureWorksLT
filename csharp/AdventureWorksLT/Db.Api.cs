@@ -9,7 +9,7 @@ namespace DevZest.Samples.AdventureWorksLT
 {
     partial class Db
     {
-        public Task<DataSet<SalesOrderHeader>> GetSalesOrderHeadersAsync(string filterText, IReadOnlyList<IColumnComparer> orderBy, CancellationToken ct)
+        public Task<DataSet<SalesOrderHeader>> GetSalesOrderHeadersAsync(string filterText, IReadOnlyList<IColumnComparer> orderBy, CancellationToken ct = default(CancellationToken))
         {
             DbSet<SalesOrderHeader> result;
             if (string.IsNullOrEmpty(filterText))
@@ -85,7 +85,7 @@ namespace DevZest.Samples.AdventureWorksLT
             await SalesOrderDetail.InsertAsync(salesOrderDetails, ct);
         }
 
-        public async Task InsertAsync(DataSet<SalesOrder> salesOrders, CancellationToken ct)
+        public async Task InsertAsync(DataSet<SalesOrder> salesOrders, CancellationToken ct = default(CancellationToken))
         {
             using (var transaction = BeginTransaction())
             {
@@ -154,7 +154,7 @@ namespace DevZest.Samples.AdventureWorksLT
             }
         }
 
-        public async Task UpdateSalesOrderAsync(DataSet<SalesOrderInfo> salesOrders, CancellationToken ct)
+        public async Task UpdateSalesOrderAsync(DataSet<SalesOrderInfo> salesOrders, CancellationToken ct = default(CancellationToken))
         {
             await EnsureConnectionOpenAsync(ct);
             using (var transaction = BeginTransaction())
@@ -170,7 +170,7 @@ namespace DevZest.Samples.AdventureWorksLT
             }
         }
 
-        public Task<int> DeleteSalesOrderAsync(DataSet<SalesOrderHeader.Key> dataSet, CancellationToken ct)
+        public Task<int> DeleteSalesOrderAsync(DataSet<SalesOrderHeader.Key> dataSet, CancellationToken ct = default(CancellationToken))
         {
             return SalesOrderHeader.DeleteAsync(dataSet, (s, _) => s.Match(_), ct);
         }

@@ -1,6 +1,4 @@
-﻿#if DbInit
-using DevZest.Data.DbInit;
-#endif
+﻿using DevZest.Data.DbInit;
 
 namespace DevZest.Samples.AdventureWorksLT
 {
@@ -8,11 +6,7 @@ namespace DevZest.Samples.AdventureWorksLT
     {
         static int Main(string[] args)
         {
-#if DbInit
             return args.RunDbInit();
-#else
-            return 0;
-#endif
         }
     }
 }

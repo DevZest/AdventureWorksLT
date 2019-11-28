@@ -6,6 +6,14 @@ using System.Data.SqlClient;
 
 namespace DevZest.Samples.AdventureWorksLT
 {
+    /**********************************************************************************************************
+     *  Most of the code is generated automatically via "Db Visualizer" tool window of
+     *  free RDO.Tools Visual Studio extension.
+     *  
+     *  To install RDO.Tools:
+     *  Select Visual Studio menu "Tools" -> "Extensions and Update...", then search for "DevZest.Data.Tools".
+     *  The extension requires Visual Studio 15.3 or later.
+     *********************************************************************************************************/
     public partial class Db : SqlSession
     {
         public Db(string connectionString, Action<Db> initializer = null)
@@ -169,7 +177,7 @@ namespace DevZest.Samples.AdventureWorksLT
 
         private DbTable<SalesOrderDetail> _salesOrderDetail;
         [DbTable("[SalesLT].[SalesOrderDetail]", Description = "Individual products associated with a specific sales order. See SalesOrderHeader.")]
-        [Relationship(nameof(FK_SalesOrderDetail_SalesOrderHeader))]
+        [Relationship(nameof(FK_SalesOrderDetail_SalesOrderHeader), DeleteRule = ForeignKeyRule.Cascade, UpdateRule = ForeignKeyRule.Cascade)]
         [Relationship(nameof(FK_SalesOrderDetail_Product))]
         public DbTable<SalesOrderDetail> SalesOrderDetail
         {

@@ -3,6 +3,14 @@ using DevZest.Data.Annotations;
 
 namespace DevZest.Samples.AdventureWorksLT
 {
+    /**********************************************************************************************************
+     *  Most of the code of this class is generated automatically via "Model Visualizer" tool window of
+     *  free RDO.Tools Visual Studio extension.
+     *  
+     *  To install RDO.Tools:
+     *  Select Visual Studio menu "Tools" -> "Extensions and Update...", then search for "DevZest.Data.Tools".
+     *  The extension requires Visual Studio 15.3 or later.
+     *********************************************************************************************************/
     [CustomValidator(nameof(VAL_LineCount))]
     [Computation(nameof(ComputeLineCount), ComputationMode.Aggregate)]
     [Computation(nameof(ComputeSubTotal), ComputationMode.Aggregate)]

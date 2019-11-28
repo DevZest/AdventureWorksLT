@@ -4,6 +4,14 @@ using DevZest.Data.Annotations;
 
 namespace DevZest.Samples.AdventureWorksLT
 {
+    /**********************************************************************************************************
+     *  Most of the code of this class is generated automatically via "Model Visualizer" tool window of
+     *  free RDO.Tools Visual Studio extension.
+     *  
+     *  To install RDO.Tools:
+     *  Select Visual Studio menu "Tools" -> "Extensions and Update...", then search for "DevZest.Data.Tools".
+     *  The extension requires Visual Studio 15.3 or later.
+     *********************************************************************************************************/
     [UniqueConstraint(nameof(AK_ProductCategory_Name), Description = "Unique nonclustered constraint.")]
     public class ProductCategory : BaseModel<ProductCategory.PK>
     {

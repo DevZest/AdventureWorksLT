@@ -4,6 +4,14 @@ using DevZest.Data.SqlServer;
 
 namespace DevZest.Samples.AdventureWorksLT
 {
+    /**********************************************************************************************************
+     *  Most of the code of this class is generated automatically via "Model Visualizer" tool window of
+     *  free RDO.Tools Visual Studio extension.
+     *  
+     *  To install RDO.Tools:
+     *  Select Visual Studio menu "Tools" -> "Extensions and Update...", then search for "DevZest.Data.Tools".
+     *  The extension requires Visual Studio 15.3 or later.
+     *********************************************************************************************************/
     [CheckConstraint(nameof(CK_Product_ListPrice), typeof(UserMessages), nameof(UserMessages.CK_Product_ListPrice), Description = "Check constraint [ListPrice] >= (0.00)")]
     [CheckConstraint(nameof(CK_Product_SellEndDate), typeof(UserMessages), nameof(UserMessages.CK_Product_SellEndDate), Description = "Check constraint [SellEndDate] >= [SellStartDate] OR [SellEndDate] IS NULL")]
     [CheckConstraint(nameof(CK_Product_Weight), typeof(UserMessages), nameof(UserMessages.CK_Product_Weight), Description = "Check constraint [Weight] >= (0.00)")]
