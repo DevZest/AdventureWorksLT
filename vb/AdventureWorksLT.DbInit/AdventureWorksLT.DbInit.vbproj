@@ -23,6 +23,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="DevZest.Data.DbInit" Version="1.0.0-*" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Update="LocalDb\AdventureWorksLT.mdf">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>

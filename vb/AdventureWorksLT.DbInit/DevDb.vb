@@ -1,6 +1,4 @@
-﻿#If DbInit Then
-
-Imports System.IO
+﻿Imports System.IO
 Imports DevZest.Data.DbInit
 
 Public Class DevDb
@@ -13,5 +11,3 @@ Public Class DevDb
         Return New Db(connectionString)
     End Function
 End Class
-
-#End If

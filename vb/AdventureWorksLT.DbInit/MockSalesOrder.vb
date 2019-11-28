@@ -1,10 +1,20 @@
 ﻿Imports System.Threading
 Imports DevZest.Data
 Imports DevZest.Data.Primitives
-
-#If DbInit Then
 Imports DevZest.Data.DbInit
-#End If
+
+'*****************************************************************************************************************************
+'*  You can generate testing data by:
+'*  1. Right click anywhere in the code editor of this class in Visual Studio, then select "Generate Db..." context menu item,
+'*     a local database \LocalDb\AdventureWorksLT.DbInit.mdf (as defined in class _DevDb) will be generated.
+'*  2. Use SQL Server Management Studio to open this local database And edit table data;
+'*  3. Right click anywhere in the code editor of this class in Visual Studio, then select "Generate DataSet..." context menu
+'*     item, the testing data code will be generated automatically for method Headers() And Details().
+'*  
+'*  To do that, Visual Studio extension RDO.Tools Is required. To install:
+'*  Select Visual Studio menu "Tools" -> "Extensions and Update...", then search for "DevZest.Data.Tools".
+'*  The extension requires Visual Studio 15.3 Or later.
+'*****************************************************************************************************************************
 
 Public Class MockSalesOrder
     Inherits DbMock(Of Db)
@@ -13,6 +23,9 @@ Public Class MockSalesOrder
         Return New MockSalesOrder().MockAsync(db, progress, ct)
     End Function
 
+    '*******************************************************************
+    '*  The body of this method Is generated automatically by RDO.Tools.
+    '*******************************************************************
     Private Shared Function Headers() As DataSet(Of SalesOrderHeader)
         Dim result As DataSet(Of SalesOrderHeader) = DataSet(Of SalesOrderHeader).Create().AddRows(4)
         Dim x As SalesOrderHeader = result.Entity
@@ -101,6 +114,9 @@ Public Class MockSalesOrder
         Return result
     End Function
 
+    '*******************************************************************
+    '*  The body of this method Is generated automatically by RDO.Tools.
+    '*******************************************************************
     Private Shared Function Details() As DataSet(Of SalesOrderDetail)
         Dim result As DataSet(Of SalesOrderDetail) = DataSet(Of SalesOrderDetail).Create().AddRows(32)
         Dim x As SalesOrderDetail = result.Entity
