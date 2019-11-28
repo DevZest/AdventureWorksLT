@@ -165,7 +165,7 @@ Partial Public Class Db
 
     Private m_SalesOrderDetail As DbTable(Of SalesOrderDetail)
     <DbTable("[SalesLT].[SalesOrderDetail]", Description:="Individual products associated with a specific sales order. See SalesOrderHeader.")>
-    <Relationship(NameOf(FK_SalesOrderDetail_SalesOrderHeader))>
+    <Relationship(NameOf(FK_SalesOrderDetail_SalesOrderHeader), DeleteRule:=ForeignKeyRule.Cascade, UpdateRule:=ForeignKeyRule.Cascade)>
     <Relationship(NameOf(FK_SalesOrderDetail_Product))>
     Public ReadOnly Property SalesOrderDetail As DbTable(Of SalesOrderDetail)
         Get
