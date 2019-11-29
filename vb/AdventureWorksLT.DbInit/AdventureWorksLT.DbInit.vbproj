@@ -23,7 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="DevZest.Data.DbInit" Version="1.0.0-*" />
+    <PackageReference Include="DevZest.Data.DbInit" Version="1.0.0" />
   </ItemGroup>
 
   <ItemGroup>

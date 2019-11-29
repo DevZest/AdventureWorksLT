@@ -52,13 +52,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DevZest.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b1c651e6085f55a1, processorArchitecture=MSIL">
-      <HintPath>..\packages\DevZest.Data.1.0.0-rc-20190926\lib\net461\DevZest.Data.dll</HintPath>
+      <HintPath>..\packages\DevZest.Data.1.0.0\lib\net461\DevZest.Data.dll</HintPath>
     </Reference>
     <Reference Include="DevZest.Data.SqlServer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b1c651e6085f55a1, processorArchitecture=MSIL">
-      <HintPath>..\packages\DevZest.Data.SqlServer.1.0.0-rc-20190926\lib\net461\DevZest.Data.SqlServer.dll</HintPath>
+      <HintPath>..\packages\DevZest.Data.SqlServer.1.0.0\lib\net461\DevZest.Data.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="DevZest.Data.WPF, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b1c651e6085f55a1, processorArchitecture=MSIL">
-      <HintPath>..\packages\DevZest.Data.WPF.1.0.0-rc-20190926\lib\net461\DevZest.Data.WPF.dll</HintPath>
+      <HintPath>..\packages\DevZest.Data.WPF.1.0.0\lib\net461\DevZest.Data.WPF.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -246,7 +246,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Analyzer Include="..\packages\DevZest.Data.1.0.0-rc-20190926\analyzers\dotnet\DevZest.Data.Analyzers.dll" />
+    <Analyzer Include="..\packages\DevZest.Data.1.0.0\analyzers\dotnet\DevZest.Data.Analyzers.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
